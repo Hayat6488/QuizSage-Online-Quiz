@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div className='px-20 flex justify-between bg-cyan-600 py-4 items-center'>
+        <div className='px-20 flex justify-between bg-slate-800 py-4 items-center'>
             <div>
                 <p className='text-orange-400 text-4xl font-semibold'>QuizSage</p>
             </div>

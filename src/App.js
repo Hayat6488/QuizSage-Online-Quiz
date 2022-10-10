@@ -7,6 +7,7 @@ import Topics from './Components/Topics/Topics';
 import Statistics from './Components/Statistics/Statistics';
 import Blogs from './Components/Blogs/Blogs';
 import About from './Components/About/About';
+import Error from './Components/ErrorPage/Error';
 
 function App() {
   const router = createBrowserRouter([
@@ -30,6 +31,10 @@ function App() {
           element: <About></About>
         }
       ]
+    },
+    {
+      path: '*',
+      element: <Error></Error>
     }
 ])
   return (
