@@ -13,7 +13,7 @@ const Quizes = () => {
         <div className='mt-20 mb-20'>
             <p className='text-orange-400 text-3xl font-semibold bg-slate-800 py-4 mb-4 break-normal'>{name}</p>
             <div className='flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row 2xl:flex-row'>
-                <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-4 mx-16 w-3/4'>
+                <div className='flex-col mx-16 w-3/4'>
                     {
                         questions.map(quiz => <Quiz key={quiz.id} quiz={quiz} setAnswered={setAnswered} answered={answered} setCorrect={setCorrect} correct={correct}></Quiz>)
                     }

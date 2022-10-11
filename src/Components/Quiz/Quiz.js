@@ -25,7 +25,7 @@ const Quiz = ({ quiz, setAnswered, answered, setCorrect, correct }) => {
     const ques = quiz.question.replace(/(<([^>]+)>)/ig, '');
 
     return (
-        <div className='bg-slate-800 p-4'>
+        <div className='bg-slate-800 p-4 mb-4'>
             <div className='flex justify-between items-center'>
                 <p className='text-yellow-400 text-xl md:text-2xl mb-2 break-normal'>{ques}</p>
                 <button hidden={showEye} onClick={()=>handleHidden()}><p><EyeIcon className='h-6 w-6 text-yellow-400 break-normal' /></p></button>
