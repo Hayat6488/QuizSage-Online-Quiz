@@ -18,8 +18,8 @@ const Quizes = () => {
                         questions.map(quiz => <Quiz key={quiz.id} quiz={quiz} setAnswered={setAnswered} answered={answered} setCorrect={setCorrect} correct={correct}></Quiz>)
                     }
                 </div>
-                <div className='bg-slate-800 p-4 text-left text-xl text-yellow-400'>
-                    <p className='mb-2 break-normal'>Results</p>
+                <div className='bg-slate-800 p-4 text-left text-md md:text-xl text-yellow-400 mt-4 lg:mt-0'>
+                    <p className='mb-2 break-normal'>Results: </p>
                     <p className='mb-2 break-normal'>Number of Questions Answered: {answered}</p>
                     <p className='break-normal'>Number of Correct Answers: {correct}</p>
                 </div>
