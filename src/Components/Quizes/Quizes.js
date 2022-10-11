@@ -4,13 +4,7 @@ import Quiz from '../Quiz/Quiz';
 
 const Quizes = () => {
     const quizes = useLoaderData();
-    const [answered, setAnswered] = useState(0);
-    const handleClick = (answer) => {
-        console.log(answer);
-        const newAnswered = answered + 1;
-        setAnswered(newAnswered);
-        console.log(answered);
-    }
+    
     const { name, questions } = quizes.data;
     return (
         <div className='mt-20 mb-20'>
@@ -18,12 +12,12 @@ const Quizes = () => {
             <div className='flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row 2xl:flex-row'>
                 <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-4 mx-16 w-3/4'>
                     {
-                        questions.map(quiz => <Quiz key={quiz.id} quiz={quiz} handleClick={handleClick}></Quiz>)
+                        questions.map(quiz => <Quiz key={quiz.id} quiz={quiz}></Quiz>)
                     }
                 </div>
                 <div className='bg-slate-800 p-4 text-left text-xl text-yellow-400'>
                     <p className='mb-2 break-normal'>Results</p>
-                    <p className='mb-2 break-normal'>Number of Questions Answered: {answered}</p>
+                    <p className='mb-2 break-normal'>Number of Questions Answered: </p>
                     <p className='break-normal'>Number of Correct Answers: </p>
                 </div>
             </div>
