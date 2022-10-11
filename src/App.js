@@ -1,14 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './Layout/Main';
 import Home from './Components/Home/Home';
-import Topics from './Components/Topics/Topics';
 import Statistics from './Components/Statistics/Statistics';
 import Blogs from './Components/Blogs/Blogs';
 import About from './Components/About/About';
 import Error from './Components/ErrorPage/Error';
-import Quiz from './Components/Quiz/Quiz';
 import Quizes from './Components/Quizes/Quizes';
 
 function App() {
