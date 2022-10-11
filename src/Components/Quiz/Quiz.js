@@ -1,17 +1,21 @@
 import React from 'react';
+import { EyeIcon } from '@heroicons/react/24/solid'
 
-const Quiz = ({quiz}) => {
-    console.log(quiz);
+const Quiz = ({quiz, handleClick}) => {
     const ques = quiz.question.replace(/(<([^>]+)>)/ig, '');
     
     return (
         <div className='bg-slate-800 p-4'>
-            <p className='text-yellow-400 text-2xl mb-2'>{ques}</p>
+            <div className='flex justify-between items-center'>
+            <p className='text-yellow-400 text-2xl mb-2 break-normal'>{ques}</p>
+            <button><p><EyeIcon className='h-6 w-6 text-yellow-400 break-normal'/></p></button>
+            </div>
             <div className='grid grid-cols-2 gap-4 '>
             {
-                quiz.options.map(option => <div className='w-60 bg-slate-600 px-2 py-1 text-orange-400 hover:bg-zinc-800 hover:text-yellow-400'><button>{option}</button></div>)
+                quiz.options.map(option => <div className='bg-slate-600 px-2 py-1 text-orange-400 hover:bg-zinc-800 hover:text-yellow-400 break-normal'><button onClick={() => handleClick({option})}>{option}</button></div>)
             }
             </div>
+            <div className='mt-2'><p className='break-normal text-xl text-yellow-400'><span className='text-orange-400'>Correct Answer: </span>{quiz.correctAnswer}</p></div>
         </div>
     );
 };

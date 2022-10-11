@@ -10,9 +10,9 @@ const Topic = ({topic}) => {
                 <img src={logo} alt="" />
             </div>
             <div className='flex justify-between mt-2'>
-                <p className='text-2xl text-yellow-400'>{name}</p>
-                <p  className='text-2xl text-yellow-400'>Ques: {total}</p>
-                <button  className='bg-yellow-400 text-2xl text-slate-800 px-3 rounded-md'><Link to={`/topic/${id}`}>Start</Link></button>
+                <p className='text-2xl text-yellow-400 break-normal'>{name}</p>
+                <p  className='text-2xl text-yellow-400 break-normal'>Ques: {total}</p>
+                <button  className='bg-yellow-400 text-2xl text-slate-800 px-3 rounded-md break-normal'><Link to={`/topic/${id}`}>Start</Link></button>
             </div>
         </div>
     );
