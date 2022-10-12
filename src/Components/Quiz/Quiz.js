@@ -17,8 +17,8 @@ const Quiz = ({ quiz, setAnswered, answered, setCorrect, correct }) => {
         }
         else{
             alert('Sorry! Answer is Incorrect...');
-            setShowEye(!showEye);
         }
+        setShowEye(!showEye);
         setState(!state);
         setAnswered(answered+1);
         }
